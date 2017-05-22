@@ -1,8 +1,8 @@
-package org.easyrules.samples.fire.beans
+package org.jeasy.groovy.tutorials.fire.beans
 
 @groovy.transform.TupleConstructor
 @groovy.transform.EqualsAndHashCode
 @groovy.transform.ToString(includePackage = false, includeNames = true)
-class Fire {
-    def room;
+class Alarm {
+    def address
 }

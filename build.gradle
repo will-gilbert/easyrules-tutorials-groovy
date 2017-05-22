@@ -22,20 +22,14 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
  ./gradlew HelloWorld -q
     Obligatory 'Hello, world' example where the input is evaluated by a rule.
 
- ./gradlew Fire -q
-    Copied from DROOLS examples. Create some rooms with sprinklers, start a fire.
-    The sprinklers will turn on an alarm will be raised. Put out the fire, the
-    sprinklers will turn off and the alarm will be silenced.
-
  ./gradlew Shop -P person=Tommy -P age=15
     Rule to evaluate drinking age (US 21); Name and age can be passed in via the command line
     or system properties; Default is 'Tom' at age '17'.
 
- ./gradlew Scheduling -q
-    A rule which implements scheduling; Reports when the time seconds count is even
-
- ./gradlew Spring
-    Similiar to 'Simple' but the rule is injected by Spring
+ ./gradlew Fire -q
+    Copied from DROOLS examples. Create some rooms with sprinklers, start a fire.
+    The sprinklers will turn on an alarm will be raised. Put out the fire, the
+    sprinklers will turn off and the alarm will be silenced.
 
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
@@ -118,7 +112,7 @@ task HelloWorld (dependsOn: 'classes', type: JavaExec) {
 }
 
 task Fire (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.fire.Launcher'
+    main = 'org.jeasy.groovy.tutorials.fire.Launcher'
 }
 
 task Shop (dependsOn: 'classes', type: JavaExec) {

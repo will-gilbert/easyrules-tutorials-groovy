@@ -1,9 +1,9 @@
 package org.jeasy.groovy.tutorials.helloworld
 
-import org.jeasy.rules.annotation.Action;
-import org.jeasy.rules.annotation.Condition;
-import org.jeasy.rules.annotation.Fact;
-import org.jeasy.rules.annotation.Rule;
+import org.jeasy.rules.annotation.Action
+import org.jeasy.rules.annotation.Condition
+import org.jeasy.rules.annotation.Fact
+import org.jeasy.rules.annotation.Rule
 
 @Rule(name = "Hello World rule", description = "Say Hello to duke's friends only")
 class HelloWorldRule {

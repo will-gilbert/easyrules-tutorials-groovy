@@ -1,12 +1,8 @@
-package org.easyrules.samples.fire
+package org.jeasy.groovy.tutorials.fire.beans
 
 @groovy.transform.TupleConstructor
 @groovy.transform.EqualsAndHashCode
 @groovy.transform.ToString(includePackage = false, includeNames = true)
-class TheWorld {
-
-    def sprinklers = []
-    def alarm = null
-    def fires = []
-
+class Room {
+    def name;
 }
