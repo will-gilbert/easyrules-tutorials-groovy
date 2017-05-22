@@ -64,17 +64,21 @@ targetCompatibility = sourceCompatibility
 
 repositories {
  	mavenLocal()
- 	mavenCentral()       
+ 	mavenCentral() 
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots'  }
+
 }
 
 dependencies {
 
-	def easyRules = '2.4.0'          // Apr 2017
+    def easyRules = '2.4.0'          // Apr 2017
+    def jeasy     = '3.0.0-SNAPSHOT' // May 2017
 	def spring    = '4.3.6.RELEASE'  // Apr 2017
     def groovy    = '2.4.10'         // Apr 2017
 
 	compile ([
-		"org.easyrules:easyrules-core:$easyRules",		
+        "org.jeasy:easy-rules-core:$jeasy",      
+        "org.easyrules:easyrules-core:$easyRules",      
 		"org.easyrules:easyrules-quartz:$easyRules",
 		"org.easyrules:easyrules-spring:$easyRules",
 		"org.springframework:spring-context-support:$spring",
@@ -103,39 +107,39 @@ tasks.withType(JavaExec) {
 }
 
 task FizzBuzz (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.fizzbuzz.FizzBuzz'
+    main = 'org.jeasy.groovy.tutorials.fizzbuzz.FizzBuzz'
 }
 
 task FizzBuzzER (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.fizzbuzz.FizzBuzzWithEasyRules'
-    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.jeasy.groovy.tutorials.fizzbuzz.FizzBuzzWithEasyRules'
 }
 task Simple (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.simple.Launcher'
+    main = 'org.jeasy.groovy.tutorials.simple.Launcher'
 }
 
 task HelloWorld (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.helloworld.Launcher'
+    main = 'org.jeasy.groovy.tutorials.helloworld.Launcher'
 }
 
 task Fire (dependsOn: 'classes', type: JavaExec) {
     main = 'org.easyrules.samples.fire.Launcher'
 }
 
-task Scheduling (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.scheduling.Launcher'
-}
-
 task Shop (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.shop.Launcher'
+    main = 'org.jeasy.groovy.tutorials.shop.Launcher'
     args = [
         findProperty('person') ?: 'Tom', 
         findProperty('age') ?: '17'
     ]
 }
 
-task Spring (dependsOn: 'classes', type: JavaExec) {
-    main = 'org.easyrules.samples.spring.Launcher'
-}
+// task Scheduling (dependsOn: 'classes', type: JavaExec) {
+//     main = 'org.easyrules.samples.scheduling.Launcher'
+// }
+
+
+// task Spring (dependsOn: 'classes', type: JavaExec) {
+//     main = 'org.easyrules.samples.spring.Launcher'
+// }
 
 
