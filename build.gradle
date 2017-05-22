@@ -73,15 +73,11 @@ dependencies {
 
     def easyRules = '2.4.0'          // Apr 2017
     def jeasy     = '3.0.0-SNAPSHOT' // May 2017
-	def spring    = '4.3.6.RELEASE'  // Apr 2017
     def groovy    = '2.4.10'         // Apr 2017
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
         "org.easyrules:easyrules-core:$easyRules",      
-		"org.easyrules:easyrules-quartz:$easyRules",
-		"org.easyrules:easyrules-spring:$easyRules",
-		"org.springframework:spring-context-support:$spring",
         "org.codehaus.groovy:groovy-all:$groovy"
     ])
 
@@ -132,14 +128,5 @@ task Shop (dependsOn: 'classes', type: JavaExec) {
         findProperty('age') ?: '17'
     ]
 }
-
-// task Scheduling (dependsOn: 'classes', type: JavaExec) {
-//     main = 'org.easyrules.samples.scheduling.Launcher'
-// }
-
-
-// task Spring (dependsOn: 'classes', type: JavaExec) {
-//     main = 'org.easyrules.samples.spring.Launcher'
-// }
 
 
