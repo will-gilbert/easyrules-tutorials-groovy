@@ -17,7 +17,7 @@ class ThereIsAnAlarmRule {
     }
 
     @Action
-    void then(@Fact('alarm') alarm) { 
+    void then( @Fact('alarm') alarm ) { 
         println "At the Fire Station: There is an Alarm at ${alarm.address}"
     }
 

@@ -21,7 +21,7 @@ class RaiseAlarmRule {
     @Action
     void then(Facts facts) { 
     	facts.add('alarm', new Alarm('123 Main Street') )
-        println( "Raise the Alarm");
+        println( "Raise an alarm");
     }
 
     @Priority

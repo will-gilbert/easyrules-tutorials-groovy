@@ -11,13 +11,13 @@ class OkToSellRule extends BasicRule {
 
     @Override
     boolean evaluate(Facts facts) {
-        def person = facts.get 'person'
+        def person = facts['person']
         person.adult == true
     }
 
     @Override
     void execute(Facts facts){
-        def person = facts.get 'person'
+        def person = facts['person']
         println "Shop Owner: Ok, $person.name, here you go."
     }
 

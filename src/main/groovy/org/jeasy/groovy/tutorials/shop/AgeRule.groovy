@@ -13,13 +13,13 @@ public class AgeRule extends BasicRule {
 
     @Override
     public boolean evaluate(Facts facts) {
-        def person = facts.get 'person'
+        def person = facts['person']
         return person.age >= ADULT_AGE
     }
 
     @Override
     public void execute(Facts facts) {
-        def person = facts.get 'person'
+        def person = facts['person']
         person.adult  = true
         println "Person $person.name has been marked as adult"
     }

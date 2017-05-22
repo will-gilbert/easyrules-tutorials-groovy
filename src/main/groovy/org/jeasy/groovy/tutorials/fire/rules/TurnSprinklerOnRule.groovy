@@ -17,10 +17,11 @@ class TurnSprinklerOnRule {
     }
 
     @Action
-    void then(Facts facts) { 
+    void then( Facts facts ) { 
+        
         facts['fires'].each { fire ->
 
-            def sprinkler = facts.get('sprinklers').find { sprinkler ->
+            def sprinkler = facts['sprinklers'].find { sprinkler ->
                 sprinkler.room.name == fire.room.name
             }
 

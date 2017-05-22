@@ -13,12 +13,12 @@ class CancelAlarmRule {
 
     @Condition
     public boolean when( Facts facts ) {
-    	facts['alarm'] && facts['fires']?.size() == 0
+    	facts['alarm'] && facts['fires'].size() == 0
     }
 
     @Action
-    void then( @Fact('alarm') alarm) { 
-        println( "Cancel the Alarm");
+    void then( @Fact('alarm') alarm ) { 
+        println "Cancel the alarm at $alarm.address"
         facts.remove(alarm)
     }
 

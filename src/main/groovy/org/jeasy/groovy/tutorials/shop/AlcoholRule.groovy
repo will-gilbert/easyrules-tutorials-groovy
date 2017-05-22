@@ -11,13 +11,13 @@ class AlcoholRule extends BasicRule {
 
     @Override
     boolean evaluate(Facts facts) {
-        def person = facts.get 'person'
+        def person = facts['person']
         !person.isAdult();
     }
 
     @Override
     void execute(Facts facts){
-        def person = facts.get 'person'
+        def person = facts['person']
         println "Shop Owner: Sorry $person.name, you are not allowed to buy alcohol."
    }
 
