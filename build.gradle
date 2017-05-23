@@ -69,11 +69,11 @@ repositories {
 dependencies {
 
     def jeasy     = '3.0.0-SNAPSHOT' // May 2017
-    def groovy    = '2.4.10'         // Apr 2017
+    def groovy    = '2.4.11'         // Apr 2017
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
-        "org.codehaus.groovy:groovy-all:$groovy"
+        "org.codehaus.groovy:groovy:$groovy"
     ])
 
 }
