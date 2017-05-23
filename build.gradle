@@ -3,34 +3,37 @@
 //=============================================================================================
 
 task usage doLast { print """${'='*90}
-Easy Rules Tutorials (http://www.easyrules.org)
+Easy Rules Tutorials (https://github.com/j-easy/easy-rules/tree/master/easy-rules-tutorials)
 
 NB: Use '--quiet' or '-q' to supress Gradle build output lines
 
- ./gradlew FizzBuzz
-    Baseline FizzBuzz using code.
-    Prints the numbers from 1 to 100. But for multiples of 3 print 'Fizz' instead 
-    of the number and for the multiples of 5 print 'Buzz'. For numbers which are 
-    multiples of both three and five print 'FizzBuzz'.
+ ./gradlew usage
+    Prints the following usage to the console
 
+ ./gradlew FizzBuzz
+    Baseline FizzBuzz using code. (From: http://wiki.c2.com/?FizzBuzzTest)
+    Prints the integers from 1 to 100.  For multiples of 3, print 'Fizz' instead 
+    of the integer and for the multiples of 5, print 'Buzz'. For integers which are 
+    multiples of both 3 and 5, print 'FizzBuzz'.
+    
  ./gradlew FizzBuzzER
     FizzBuzz implementation using EasyRules.
-
+    
  ./gradlew Simple
     Very simple EasyRules examples with one, always true, rule.
-
+    
  ./gradlew HelloWorld -q
     Obligatory 'Hello, world' example where the input is evaluated by a rule.
-
+    
  ./gradlew Shop -P person=Tommy -P age=15
-    Rule to evaluate drinking age (US 21); Name and age can be passed in via the command line
+    Rule to evaluate drinking age (US 21); Nmae and age can be passed in via the command line
     or system properties; Default is 'Tom' at age '17'.
 
  ./gradlew Fire -q
-    Copied from DROOLS examples. Create some rooms with sprinklers, start a fire.
-    The sprinklers will turn on an alarm will be raised. Put out the fire, the
-    sprinklers will turn off and the alarm will be silenced.
-
+    Copied from DROOLS examples. Create some rooms with sprinklers, start some fires.
+    The sprinklers will turn on and an alarm will be raised to notify the Fire Department.
+     Put out the fires, the sprinklers will turn off and the alarm will be silenced.
+           
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
 
@@ -65,13 +68,11 @@ repositories {
 
 dependencies {
 
-    def easyRules = '2.4.0'          // Apr 2017
     def jeasy     = '3.0.0-SNAPSHOT' // May 2017
     def groovy    = '2.4.10'         // Apr 2017
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
-        "org.easyrules:easyrules-core:$easyRules",      
         "org.codehaus.groovy:groovy-all:$groovy"
     ])
 
