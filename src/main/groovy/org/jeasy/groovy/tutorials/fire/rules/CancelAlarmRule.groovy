@@ -19,7 +19,7 @@ class CancelAlarmRule {
     @Action
     void then(Facts facts) {
         println "Cancel the alarm at ${facts['alarm'].address}"
-        facts.remove('alarm')
+        facts.remove 'alarm'
     }
 
     @Priority
