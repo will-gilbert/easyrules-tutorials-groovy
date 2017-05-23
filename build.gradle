@@ -32,8 +32,13 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
  ./gradlew Fire -q
     Copied from DROOLS examples. Create some rooms with sprinklers, start some fires.
     The sprinklers will turn on and an alarm will be raised to notify the Fire Department.
-     Put out the fires, the sprinklers will turn off and the alarm will be silenced.
-           
+    Put out the fires, the sprinklers will turn off and the alarm will be silenced.
+ 
+ ./gradlew Discount -P transactions=5 -q
+    Copied from DROOLS examples. A customer buys and returns various items. A discount
+    is applied or removed depending on the total at the end of each transaction. 
+    Transactions and item are generated randomly.
+
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
 
@@ -122,6 +127,13 @@ task Shop (dependsOn: 'classes', type: JavaExec) {
         findProperty('person') ?: 'Tom', 
         findProperty('age') ?: '17'
     ]
+}
+
+task Discount (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.jeasy.groovy.tutorials.discount.Launcher'
+    args = [
+        findProperty('transactions') ?: '5'
+    ] 
 }
 
 
