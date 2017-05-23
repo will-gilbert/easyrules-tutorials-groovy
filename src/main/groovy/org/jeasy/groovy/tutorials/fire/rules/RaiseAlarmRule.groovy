@@ -14,8 +14,8 @@ import org.jeasy.rules.api.Facts;
 class RaiseAlarmRule {
 
     @Condition
-    boolean when( @Fact('fires') fires ) {
-    	fires.size() > 0
+    boolean when(Facts facts) {
+    	facts['fires'].size() > 0 && !facts['alarm']
     }
 
     @Action
