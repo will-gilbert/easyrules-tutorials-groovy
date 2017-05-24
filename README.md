@@ -35,6 +35,15 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
         Copied from DROOLS examples. Create some rooms with sprinklers, start some fires.
         The sprinklers will turn on and an alarm will be raised to notify the Fire Department.
         Put out the fires, the sprinklers will turn off and the alarm will be silenced.
+ 
+    ./gradlew Discount -P transactions=5 -q
+        Copied from DROOLS examples. A customer selects and returns various items. A discount
+        is applied or removed depending on the merchandise total at the end of each transaction. 
+        Transactions are generated randomly.
+
+    ./gradlew HonestPolitician
+        Initialize with honest politicians and the people rejoice. Introduce big corporations
+        and corrupt each politician.  How the people feel now?
               
     ./gradlew clean
      Remove all reports and artifacts from './build'
