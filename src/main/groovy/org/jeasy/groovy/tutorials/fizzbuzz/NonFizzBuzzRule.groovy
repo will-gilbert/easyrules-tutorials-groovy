@@ -10,10 +10,10 @@ import org.jeasy.rules.annotation.Priority
 class NonFizzBuzzRule {
 
     @Condition
-    boolean when(@Fact('number') Integer number) { number % 5 != 0 || number % 7 != 0 }
+    boolean when(@Fact('number') number) { number % 5 != 0 || number % 7 != 0 }
 
     @Action
-    public void then(@Fact('number') Integer number) { print number }
+    public void then(@Fact('number') number) { print number }
 
     @Priority
     int getPriority() { 3 }

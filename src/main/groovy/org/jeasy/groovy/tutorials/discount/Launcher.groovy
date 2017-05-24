@@ -49,7 +49,7 @@ class Launcher {
             def item = randomPurchase()
 
             pause "$action $item"
-            facts.put action, item
+            facts.put action,item
             rulesEngine.fire rules,facts
         }
   }
@@ -62,12 +62,12 @@ class Launcher {
 
     public static String randomPurchase() {
         def items = ['shoes', 'hat', 'pants']
-        return items[(new Random().nextInt() % 3)]
+        return items[(new Random().nextInt() % items.size())]
     }
 
     public static String randomAction() {
         def actions = ['purchase', 'purchase', 'return']
-        return actions[(new Random().nextInt() % 3)]
+        return actions[(new Random().nextInt() % actions.size())]
     }
 
      

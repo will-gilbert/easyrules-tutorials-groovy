@@ -10,7 +10,7 @@ import org.jeasy.rules.annotation.Priority
 class BuzzRule {
 
     @Condition
-    boolean when(@Fact('number') Integer number) { 
+    boolean when(@Fact('number') number) { 
         number % 5 == 0 
     }
 

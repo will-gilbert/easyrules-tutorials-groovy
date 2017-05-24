@@ -1,5 +1,6 @@
 package org.jeasy.groovy.tutorials.discount.rules
 
+import org.jeasy.groovy.tutorials.discount.beans.*
 
 import org.jeasy.rules.annotation.Action
 import org.jeasy.rules.annotation.Condition
