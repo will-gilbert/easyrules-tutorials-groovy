@@ -42,8 +42,8 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
         Transactions are generated randomly.
 
     ./gradlew HonestPolitician
-        Initialize with honest politicians and the people rejoice. Introduce big corporations
-        and corrupt each politician.  How the people feel now?
+        Copied from DROOLS examples.Initialize with honest politicians and the people rejoice. 
+        Introduce big corporationsand corrupt each politician.  How the people feel now?
               
     ./gradlew clean
      Remove all reports and artifacts from './build'
