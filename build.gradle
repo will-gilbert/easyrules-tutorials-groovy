@@ -5,7 +5,7 @@
 task usage doLast { print """${'='*90}
 Easy Rules Tutorials (https://github.com/j-easy/easy-rules/tree/master/easy-rules-tutorials)
 
-NB: Use '--quiet' or '-q' to supress Gradle build output lines
+NB: Use '--quiet' or '-q' to suppress Gradle build output lines
 
  ./gradlew usage
     Prints the following usage to the console
@@ -26,7 +26,7 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
     Obligatory 'Hello, world' example where the input is evaluated by a rule.
     
  ./gradlew Shop -P person=Tommy -P age=15
-    Rule to evaluate drinking age (US 21); Nmae and age can be passed in via the command line
+    Rule to evaluate drinking age (US 21); Name and age can be passed in via the command line
     or system properties; Default is 'Tom' at age '17'.
 
  ./gradlew Fire -q
@@ -35,9 +35,9 @@ NB: Use '--quiet' or '-q' to supress Gradle build output lines
     Put out the fires, the sprinklers will turn off and the alarm will be silenced.
  
  ./gradlew Discount -P transactions=5 -q
-    Copied from DROOLS examples. A customer buys and returns various items. A discount
-    is applied or removed depending on the total at the end of each transaction. 
-    Transactions and item are generated randomly.
+    Copied from DROOLS examples. A customer selects and returns various items. A discount
+    is applied or removed depending on the merchandise total at the end of each transaction. 
+    Transactions are generated randomly.
 
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
