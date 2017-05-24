@@ -23,11 +23,11 @@ class Launcher {
 
         // Create Facts
         def facts = new Facts()
-        facts.add('input', input)
+        facts.put 'input',input
 
-        // Create and register Rules
+        // Create and register rules
         def rules = new Rules()
-        rules.register(new HelloWorldRule())
+        rules.register new HelloWorldRule()
     
         def rulesEngine = new DefaultRulesEngine()
         rulesEngine.fire(rules, facts)

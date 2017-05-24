@@ -20,7 +20,7 @@ class RaiseAlarmRule {
 
     @Action
     void then(Facts facts) { 
-    	facts.add('alarm', new Alarm('123 Main Street') )
+    	facts.put 'alarm', new Alarm('123 Main Street')
         println( "Raise an alarm");
     }
 

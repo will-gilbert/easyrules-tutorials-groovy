@@ -9,18 +9,16 @@ import org.jeasy.rules.annotation.Rule
 class HelloWorldRule {
 
 
-    // boolean when() { input.equalsIgnoreCase 'yes' }
-
     // The rule should be applied only if the user's response is yes (Duke's friend)
     @Condition
-    boolean when(@Fact('input') String input) { 
+    boolean when( @Fact('input') input ) { 
         input.equalsIgnoreCase 'yes' 
     }
 
 
     // When rule conditions are satisfied, print 'Hello duke's friend!' to the console
     @Action
-    void then() throws Exception { 
+    void then() { 
         println 'Hello Duke\'s friend!' 
     }
 

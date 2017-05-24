@@ -34,8 +34,8 @@ class Launcher {
 
         // Create a Facts container; Add sprinkers and an empty list of fires
         def facts = new Facts()    
-        facts.add 'sprinklers',sprinklers
-        facts.add 'fires',[]
+        facts.put 'sprinklers',sprinklers
+        facts.put 'fires',[]
 
         // Create the rules engine
         def rulesEngine = aNewRulesEngine()

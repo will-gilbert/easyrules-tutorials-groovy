@@ -25,18 +25,18 @@ import static org.jeasy.rules.core.RulesEngineBuilder.aNewRulesEngine
 
         // Create and register rules
         def rules = new Rules()
-        rules.register(new FizzRule())
-        rules.register(new BuzzRule())
-        rules.register(new NonFizzBuzzRule())
-        rules.register(new FizzBuzzRule(new FizzRule(), new BuzzRule()))
+        rules.register new FizzRule()
+        rules.register new BuzzRule()
+        rules.register new NonFizzBuzzRule()
+        rules.register new FizzBuzzRule(new FizzRule(), new BuzzRule())
 
         // Create a facts container
         def facts = new Facts();
 
         // Fire rules
         (1..100).each { number ->
-            facts.add('number', number)
-            fizzBuzzEngine.fire(rules, facts)
+            facts.put 'number', number
+            fizzBuzzEngine.fire rules, facts
             println()
         }
     }

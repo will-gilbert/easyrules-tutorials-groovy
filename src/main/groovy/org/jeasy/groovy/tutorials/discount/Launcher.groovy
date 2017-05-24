@@ -22,10 +22,10 @@ class Launcher {
         
         // Create a customer and some shopping items; Add them as facts
         def facts = new Facts()    
-        facts.add 'customer', new Customer( 'Mark')
-        facts.add 'shoes', new Product( name:'a pair of shoes', price:60 )
-        facts.add 'hat', new Product( name:'a hat', price:40 )
-        facts.add 'pants', new Product( name:'a pair of pants', price:120 )
+        facts.put 'customer', new Customer( 'Mark')
+        facts.put 'shoes', new Product( name:'a pair of shoes', price:60 )
+        facts.put 'hat', new Product( name:'a hat', price:40 )
+        facts.put 'pants', new Product( name:'a pair of pants', price:120 )
 
 
         // Create the rules engine
@@ -49,7 +49,7 @@ class Launcher {
             def item = randomPurchase()
 
             pause "$action $item"
-            facts.add action, item
+            facts.put action, item
             rulesEngine.fire rules,facts
         }
   }

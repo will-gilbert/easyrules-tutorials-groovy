@@ -20,7 +20,7 @@ class Launcher {
 
         // Create Facts and add the person
         def facts = new Facts();
-        facts.add 'person',person
+        facts.put 'person',person
 
         // Create Rules
         def rules = new Rules()
