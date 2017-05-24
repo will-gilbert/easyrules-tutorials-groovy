@@ -39,6 +39,10 @@ NB: Use '--quiet' or '-q' to suppress Gradle build output lines
     is applied or removed depending on the merchandise total at the end of each transaction. 
     Transactions are generated randomly.
 
+ ./gradlew HonestPolitician
+    Initialize with honest politicians and the people rejoice. Introduce big corporations
+    and corrupt each politician.  How the people feel now?
+
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
 
@@ -134,6 +138,10 @@ task Discount (dependsOn: 'classes', type: JavaExec) {
     args = [
         findProperty('transactions') ?: '5'
     ] 
+}
+
+task HonestPolitician (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.jeasy.groovy.tutorials.honestpolitician.Launcher'
 }
 
 
