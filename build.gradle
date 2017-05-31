@@ -71,14 +71,13 @@ targetCompatibility = sourceCompatibility
 repositories {
  	mavenLocal()
  	mavenCentral() 
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots'  }
-
+    //maven { url 'https://oss.sonatype.org/content/repositories/snapshots'  } // Only for Snapshots
 }
 
 dependencies {
 
-    def jeasy     = '3.0.0-SNAPSHOT' // May 2017
-    def groovy    = '2.4.11'         // Apr 2017
+    def jeasy     = '3.0.0'   // JUn 2017
+    def groovy    = '2.4.11'  // Apr 2017
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
