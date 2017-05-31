@@ -76,7 +76,7 @@ repositories {
 
 dependencies {
 
-    def jeasy     = '3.0.0'   // JUn 2017
+    def jeasy     = '3.0.0'   // Jun 2017
     def groovy    = '2.4.11'  // Apr 2017
 
 	compile ([

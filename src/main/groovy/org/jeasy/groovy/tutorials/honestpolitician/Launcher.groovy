@@ -21,10 +21,10 @@ class Launcher {
 
         // Create some politicians as facts
         def politicians = []
-        politicians << new Politician( 'President of Umpa Lumpa')
-        politicians << new Politician( 'Prime Minster of Cheeseland')
-        politicians << new Politician( 'Tsar of Pringapopaloo')
-        politicians << new Politician( 'Omnipotence Om')
+        politicians << new Politician( 'President of Umpa Lumpa' )
+        politicians << new Politician( 'Prime Minster of Cheeseland' )
+        politicians << new Politician( 'Tsar of Pringapopaloo' )
+        politicians << new Politician( 'Omnipotence Om' )
 
         def facts = new Facts()
         facts.put 'politicians',politicians
@@ -40,8 +40,8 @@ class Launcher {
         def rules = new Rules()
         rules.register new HonestPoliticianRule()
         rules.register new NoHonestPoliticianRule()
-        rules.register  new RejoiceRule()
-        rules.register  new LamentRule()
+        rules.register new RejoiceRule()
+        rules.register new LamentRule()
 
         println 'We have honest politicians.'
         rulesEngine.fire rules,facts

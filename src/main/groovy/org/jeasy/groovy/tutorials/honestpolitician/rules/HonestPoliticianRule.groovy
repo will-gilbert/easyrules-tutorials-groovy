@@ -1,8 +1,5 @@
 package org.jeasy.groovy.tutorials.honestpolitician.rules
 
-
-import org.jeasy.groovy.tutorials.honestpolitician.beans.Hope
-
 import org.jeasy.rules.annotation.Action
 import org.jeasy.rules.annotation.Condition
 import org.jeasy.rules.annotation.Fact
@@ -21,7 +18,7 @@ class HonestPoliticianRule {
 
     @Action
     void then( Facts facts) {
-        facts.put 'hope', new Hope()
+        facts.put 'hope', new String("Hope!")
     }
 
     @Priority
