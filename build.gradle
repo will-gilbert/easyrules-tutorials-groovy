@@ -5,7 +5,8 @@
 task usage doLast { print """${'='*90}
 Easy Rules Tutorials (https://github.com/j-easy/easy-rules/tree/master/easy-rules-tutorials)
 
-NB: Use '--quiet' or '-q' to suppress Gradle build output lines
+NB: Use then terminal command 'TERM=dumb' OR '--console=plain' along  
+    with  '--quiet' or '-q' to suppress Gradle build output lines.
 
  ./gradlew usage
     Prints the following usage to the console
@@ -22,19 +23,19 @@ NB: Use '--quiet' or '-q' to suppress Gradle build output lines
  ./gradlew Simple
     Very simple EasyRules examples with one, always true, rule.
     
- ./gradlew HelloWorld -q
+ ./gradlew HelloWorld --quiet --console=plain
     Obligatory 'Hello, world' example where the input is evaluated by a rule.
     
- ./gradlew Shop -P person=Tommy -P age=15
+ ./gradlew Shop -P person=Tommy -P age=15 --quiet --console=plain
     Rule to evaluate drinking age (US 21); Name and age can be passed in via the command line
     or system properties; Default is 'Tom' at age '17'.
 
- ./gradlew Fire -q
+ ./gradlew Fire --quiet --console=plain
     Copied from DROOLS examples. Create some rooms with sprinklers, start some fires.
     The sprinklers will turn on and an alarm will be raised to notify the Fire Department.
     Put out the fires, the sprinklers will turn off and the alarm will be silenced.
  
- ./gradlew Discount -P transactions=5 -q
+ ./gradlew Discount -P transactions=5 --quiet --console=plain
     Copied from DROOLS examples. A customer selects and returns various items. A discount
     is applied or removed depending on the merchandise total at the end of each transaction. 
     Transactions are generated randomly.
@@ -53,9 +54,7 @@ ${'='*90}
 // P L U G I N S   ===========================================================================
 //============================================================================================
 
-
 apply plugin: 'groovy'
-
 
 //=============================================================================================
 // C O N F I G U R A T I O N  =================================================================
@@ -76,12 +75,15 @@ repositories {
 
 dependencies {
 
-    def jeasy     = '3.0.0'   // Jun 2017
-    def groovy    = '2.4.11'  // Apr 2017
+    def jeasy  = '3.1.0'  // Dec 2017 
+    def groovy = '2.4.13' // Nov 2017
+    def slf4j  = '1.7.25' 
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
-        "org.codehaus.groovy:groovy:$groovy"
+        "org.jeasy:easy-rules-mvel:$jeasy",      
+        "org.codehaus.groovy:groovy:$groovy",
+        "org.slf4j:slf4j-simple:$slf4j"
     ])
 
 }

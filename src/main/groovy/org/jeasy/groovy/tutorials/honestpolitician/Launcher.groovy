@@ -5,6 +5,7 @@ import org.jeasy.groovy.tutorials.honestpolitician.rules.*
 
 import org.jeasy.rules.api.Facts;
 import org.jeasy.rules.api.Rules;
+import org.jeasy.rules.core.DefaultRulesEngine;
 
 import static org.jeasy.rules.core.RulesEngineBuilder.aNewRulesEngine
 
@@ -31,10 +32,7 @@ class Launcher {
 
 
         // Create the rules engine
-        def rulesEngine = aNewRulesEngine()
-                .named("Honest Politician Demo")
-                .build()
-
+        def rulesEngine = new DefaultRulesEngine()
 
         // Create and register the initial state of rules
         def rules = new Rules()

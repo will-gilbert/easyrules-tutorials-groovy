@@ -5,8 +5,7 @@ import org.jeasy.groovy.tutorials.fire.beans.*
 
 import org.jeasy.rules.api.Facts;
 import org.jeasy.rules.api.Rules;
-
-import static org.jeasy.rules.core.RulesEngineBuilder.aNewRulesEngine
+import org.jeasy.rules.core.DefaultRulesEngine;
 
 class Launcher {
 
@@ -38,9 +37,7 @@ class Launcher {
         facts.put 'fires',[]
 
         // Create the rules engine
-        def rulesEngine = aNewRulesEngine()
-                .named("Fire Alarm Demo")
-                .build()
+        def rulesEngine = new DefaultRulesEngine()
 
         // Create and register all of the rules
         def rules = new Rules()
