@@ -50,18 +50,18 @@ NB: Use then terminal command 'TERM=dumb' OR '--console=plain' along
     is applied or removed depending on the merchandise total at the end of each transaction. 
     Transactions are generated randomly.
 
-v ./gradlew HonestPolitician
+### ./gradlew HonestPolitician
  
     Initialize with honest politicians and the people rejoice. Introduce big corporations
     and corrupt each politician.  How the people feel now?
 
 ### ./gradlew Weather -P isRaining=true --quiet --console=plain
 
-### ###  ./gradlew AirCo -P current=30  -P target=25 --quiet --console=plain
+### ./gradlew AirCo -P current=30  -P target=25 --quiet --console=plain
  
     Nice demo of the new 'InferenceRulesEngine'
 
- ./gradlew clean
+### ./gradlew clean
  
   Remove all reports and artifacts from './$project.buildDir.name'
 
