@@ -44,6 +44,10 @@ NB: Use then terminal command 'TERM=dumb' OR '--console=plain' along
     Initialize with honest politicians and the people rejoice. Introduce big corporations
     and corrupt each politician.  How the people feel now?
 
+ ./gradlew Weather -P isRaining=true --quiet --console=plain
+
+ ./gradlew AirCo -P current=30  -P target=25 --quiet --console=plain
+
  ./gradlew clean
   Remove all reports and artifacts from './$project.buildDir.name'
 
@@ -143,6 +147,22 @@ task Discount (dependsOn: 'classes', type: JavaExec) {
 
 task HonestPolitician (dependsOn: 'classes', type: JavaExec) {
     main = 'org.jeasy.groovy.tutorials.honestpolitician.Launcher'
+}
+
+
+task Weather (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.jeasy.groovy.tutorials.weather.Launcher'
+    args = [
+        findProperty('isRaining') ?: 'true'
+    ] 
+}
+
+task AirCo (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.jeasy.groovy.tutorials.airco.Launcher'
+    args = [
+        findProperty('current') ?: '30',
+        findProperty('target') ?: '25'
+    ] 
 }
 
 
