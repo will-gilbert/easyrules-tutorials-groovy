@@ -65,4 +65,4 @@ v ./gradlew HonestPolitician
  
   Remove all reports and artifacts from './$project.buildDir.name'
 
-####Windows Users - use ```gradlew``` instead of ```./gradlew``` to run each tutorial.
+#### Windows Users - use ```gradlew``` instead of ```./gradlew``` to run each tutorial.
