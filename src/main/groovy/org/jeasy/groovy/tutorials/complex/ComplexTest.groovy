@@ -89,7 +89,7 @@ class ComplexTest {
         // Create a rules engine
         def rulesEngine = new DefaultRulesEngine()
 
-        println "Starting..."
+        println "Starting, ${rules.size()} rule(s)..."
         // Fire rules for each order item
         for (OrderItem item: order.items) {
             facts.put 'item', item
