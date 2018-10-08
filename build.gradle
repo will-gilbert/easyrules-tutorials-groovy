@@ -65,7 +65,7 @@ apply plugin: 'groovy'
 // C O N F I G U R A T I O N  =================================================================
 //=============================================================================================
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = sourceCompatibility
 
 //=============================================================================================
@@ -80,8 +80,8 @@ repositories {
 
 dependencies {
 
-    def jeasy  = '3.1.0'  // Dec 2017 
-    def groovy = '2.4.13' // Nov 2017
+    def jeasy  = '3.2.0' // Oct 2018
+    def groovy = '2.5.2' // Oct 2018
     def slf4j  = '1.7.25' 
 
 	compile ([

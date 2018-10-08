@@ -7,7 +7,7 @@ import org.jeasy.rules.api.Facts;
 import org.jeasy.rules.api.Rules;
 import org.jeasy.rules.core.DefaultRulesEngine;
 
-import static org.jeasy.rules.core.RulesEngineBuilder.aNewRulesEngine
+//import static org.jeasy.rules.core.RulesEngineBuilder.aNewRulesEngine
 
 class Launcher {
 

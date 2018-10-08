@@ -16,8 +16,11 @@ class Launcher {
         println "${'='*90}"
 
 
+        String name = args?.size()>0 ? args[0] ?: "Tom" : "Tom"
+        int age = args?.size() > 1 ? args[1] as int ?: 16 : 16
+
         // Create a person instance based on input
-        def person = new Person(name:args[0], age:args[1] as int)
+        def person = new Person(name:/*args[0]*/name, age:/*args[1] as int*/age)
         println "$person.name($person.age): Hi! can I have some Vodka please?"
 
         // Create Facts and add the person
