@@ -86,7 +86,8 @@ dependencies {
 
 	compile ([
         "org.jeasy:easy-rules-core:$jeasy",      
-        "org.jeasy:easy-rules-mvel:$jeasy",      
+        "org.jeasy:easy-rules-mvel:$jeasy",
+        "org.jeasy:easy-rules-support:$jeasy",    
         "org.codehaus.groovy:groovy:$groovy",
         "org.slf4j:slf4j-simple:$slf4j"
     ])
