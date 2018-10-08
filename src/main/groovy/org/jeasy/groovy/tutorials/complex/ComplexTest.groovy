@@ -57,6 +57,28 @@ class ComplexTest {
 
         rules.register ruleGroupIPhoneBlack
 
+        // create additional rule, assuming we have read rule conditions from some external source f.e. DB
+        String ruleName = 'Product brand is IPhone OR product color is green'
+        String ruleDescription = 'Rule conditions are read from external source'
+        int rulePriority = 2
+        String[] ruleConditions = [
+                'item.product.brand.equalsIgnoreCase("IPHONE")',
+                'item.product.color == java.awt.Color.GREEN'
+        ]
+        String ruleGroupModifier = '||'
+        String[] ruleActions = [
+                'customer.addPoints(Util.amountToPoins(item.amount))',
+                'System.out.println(customer + " got "+Util.amountToPoins(item.amount)+" points")'
+        ]
+        String ruleActionsModifier = ';'
+
+        rules.register(new MVELRule()
+                .name(ruleName)
+                .description(ruleDescription)
+                .priority(rulePriority)
+                .when(ruleConditions.join(ruleGroupModifier))
+                .then(ruleActions.join(ruleActionsModifier)+ruleActionsModifier)
+        )
 
         //  Create facts
         // Create Facts and add the person
